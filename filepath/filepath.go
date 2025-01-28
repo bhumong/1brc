@@ -1,6 +1,6 @@
 package filepath
 
-var file = "/Users/samuel-sqe/DEV/TEST_AREA/1brc/measurements.txt"
+var file = "put your path here"
 
 func GetPath() string {
 	return file
