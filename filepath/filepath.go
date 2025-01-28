@@ -1,7 +1,16 @@
 package filepath
 
-var file = "put your path here"
+import (
+	"log"
+	"os"
+
+	"github.com/joho/godotenv"
+)
 
 func GetPath() string {
-	return file
+	err := godotenv.Load("../.env")
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+	return os.Getenv("BRC1_FULL_PATH")
 }
